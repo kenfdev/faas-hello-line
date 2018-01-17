@@ -1,0 +1,11 @@
+provider:
+  name: faas
+  gateway: http://localhost:8080
+
+functions:
+  hello-line-func:
+    lang: node
+    handler: ./hello-line-func
+    image: kenfdev/hello-line-func:0.1
+    environment_file:
+      - .env.yml
